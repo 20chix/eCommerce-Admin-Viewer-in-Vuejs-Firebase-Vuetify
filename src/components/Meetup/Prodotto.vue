@@ -1,17 +1,19 @@
 <template>
   <v-container>
-    
+    <!-- Spinner if loading is true -->
     <v-layout row wrap v-if="loading">
       <v-flex xs12 class="text-xs-center">
         <v-progress-circular
           indeterminate
           class="primary--text"
-          :width="7"
-          :size="70"></v-progress-circular>
+          :width="5"
+          :size="100"></v-progress-circular>
       </v-flex>
     </v-layout>
+
+
     <v-layout row wrap v-else>
-      <v-flex xs6>
+      <v-flex xs12>
         <v-card>
           <v-card-title>
             <h6 class="primary--text">{{ meetup.title }}</h6>
@@ -25,9 +27,13 @@
             height="400px"
           ></v-card-media>
           <v-card-text>
-            <div class="info--text">{{ meetup.date | date }} - {{ meetup.location }}</div>
-            <div>{{ meetup.description }}</div>
+             <strong class="display-2 right">  &euro;  {{ meetup.price }}</strong>
+            <div>{{ meetup.description }}
+            <div class="info--text"> Aggiunto {{ meetup.date | date }}</div>
+            </div>
+           
           </v-card-text>
+          
         </v-card>
       </v-flex>
     </v-layout>

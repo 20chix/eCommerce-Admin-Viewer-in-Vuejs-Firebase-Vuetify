@@ -67,6 +67,7 @@ export const store = new Vuex.Store({
               title: obj[key].title,
               description: obj[key].description,
               imageUrl: obj[key].imageUrl,
+              price: obj[key].price,
               date: obj[key].date,
               location: obj[key].location,
               creatorId: obj[key].creatorId
@@ -86,6 +87,8 @@ export const store = new Vuex.Store({
       const meetup = {
         title: payload.title,
         description: payload.description,
+        date: payload.date.toISOString(),
+        price: payload.price,
         creatorId: getters.user.id
       }
       let imageUrl

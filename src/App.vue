@@ -121,7 +121,7 @@
           if(this.getUserAdmin()){
             console.log("I'am the admin")
             menuItems = [
-              {icon: 'shopping_cart', title: 'Guarda i prodotti', link: '/ExploraProdotti'},
+              // {icon: 'shopping_cart', title: 'Guarda i prodotti', link: '/ExploraProdotti'},
               {icon: 'add', title: 'Aggiungi un prodotto', link: '/aggiungi_prodotto/new'},
               {icon: 'person', title: 'Profile', link: '/profile'}
           ]
@@ -145,13 +145,12 @@
     },
     methods: {
       onLogout () {
-        //this.$store.dispatch('logout')
-        this.getUserAdmin()
-        
+        this.$store.dispatch('logout')
       },
       //User admin mKyP14pMZzT7cTdZOV4Jln2ey512
       getUserAdmin(){
-        if(this.$store.getters.user.id == "mKyP14pMZzT7cTdZOV4Jln2ey512"){
+        if(this.$store.getters.user.id == "mKyP14pMZzT7cTdZOV4Jln2ey512" ||
+          this.$store.getters.user.id == "Gupky78JfOeHUAAS36HQIEPxKWz2"){
             userAdmin : true
             return true
             

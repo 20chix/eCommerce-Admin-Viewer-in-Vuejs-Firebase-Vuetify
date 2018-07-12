@@ -1,15 +1,16 @@
 <template>
   <v-container>
     <v-layout row>
-      <v-flex xs12 sm6 offset-sm3>
+      <v-flex xs12 lg6 offset-sm3>
         <h4>Aggiungi un prodotto</h4>
       </v-flex>
     </v-layout>
     <v-layout row>
       <v-flex xs12>
         <form @submit.prevent="onCreateMeetup">
+
           <v-layout row>
-            <v-flex xs12 sm6 offset-sm3>
+            <v-flex xs12 lg6 offset-sm3>
               <v-text-field
                 name="title"
                 label="Title"
@@ -21,7 +22,7 @@
          
           
           <v-layout row>
-            <v-flex xs12 sm6 offset-sm3>
+            <v-flex xs12 lg6 offset-sm3>
               <v-btn raised class="primary" @click="onPickFile">Scegli Immagine</v-btn>
               <input
                 type="file"
@@ -31,13 +32,17 @@
                 @change="onFilePicked">
             </v-flex>
           </v-layout>
+
+          
           <v-layout row>
             <v-flex xs12 sm6 offset-sm3>
               <img :src="imageUrl" height="150">
             </v-flex>
           </v-layout>
           <v-layout row>
-            <v-flex xs12 sm6 offset-sm3>
+
+
+            <v-flex xs12 lg6 offset-sm3>
               <v-text-field
                 name="description"
                 label="Descrizione"
@@ -47,11 +52,21 @@
                 required></v-text-field>
             </v-flex>
           </v-layout>
-         
+
+          <v-layout row>
+            <v-flex xs12 lg6 offset-sm3>
+              <v-text-field
+                name="title"
+                label="Prezzo"
+                id="price"
+                v-model="price"
+                required></v-text-field>
+            </v-flex>
+          </v-layout>
     
           
           <v-layout row>
-            <v-flex xs12 sm6 offset-sm3>
+            <v-flex xs12 lg6 offset-sm3>
               <v-btn
                 class="primary"
                 :disabled="!formIsValid"
@@ -71,6 +86,7 @@
         title: '',
         imageUrl: '',
         description: '',
+        price: '',
         date: new Date(),
         time: new Date(),
         image: null
@@ -80,7 +96,8 @@
       formIsValid () {
         return this.title !== '' &&
           this.imageUrl !== '' &&
-          this.description !== ''
+          this.description !== '' &&
+          this.price !== ''
       },
       submittableDateTime () {
         const date = new Date(this.date)
@@ -107,7 +124,9 @@
         const meetupData = {
           title: this.title,
           image: this.image,
-          description: this.description
+          description: this.description,
+          price: this.price,
+          date: this.submittableDateTime
         }
         this.$store.dispatch('createMeetup', meetupData)
         this.$router.push('/')

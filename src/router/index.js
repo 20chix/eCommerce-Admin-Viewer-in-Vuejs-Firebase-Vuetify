@@ -7,7 +7,7 @@ import AggiungiProdotto from '@/components/Meetup/AggiungiProdotto'
 import Profile from '@/components/User/Profile'
 import Signup from '@/components/User/Signup'
 import Signin from '@/components/User/Signin'
-import Prodotto from '@/components/Meetup/Meetup'
+import Prodotto from '@/components/Meetup/Prodotto'
 import AuthGuard from './auth-guard'
 
 Vue.use(Router)
