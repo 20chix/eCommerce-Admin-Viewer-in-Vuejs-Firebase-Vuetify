@@ -16,17 +16,27 @@
             <v-card-text>
               <v-text-field
                 name="title"
-                label="Title"
+                label="Titolo"
                 id="title"
                 v-model="editedTitle"
                 required></v-text-field>
+
+              <v-text-field
+                name="price"
+                label="Prezzo"
+                id="price"
+                prefix="€"
+                v-model="editedPrice"
+                required></v-text-field>
+
               <v-text-field
                 name="description"
-                label="Description"
+                label="Descrizione"
                 id="description"
                 multi-line
                 v-model="editedDescription"
                 required></v-text-field>
+
             </v-card-text>
           </v-flex>
         </v-layout>
@@ -54,7 +64,8 @@
       return {
         editDialog: false,
         editedTitle: this.meetup.title,
-        editedDescription: this.meetup.description
+        editedDescription: this.meetup.description,
+        editedPrice: this.meetup.price
       }
     },
     methods: {
@@ -66,7 +77,8 @@
         this.$store.dispatch('updateMeetupData', {
           id: this.meetup.id,
           title: this.editedTitle,
-          description: this.editedDescription
+          description: this.editedDescription,
+          price: this.editedPrice
         })
       }
     }

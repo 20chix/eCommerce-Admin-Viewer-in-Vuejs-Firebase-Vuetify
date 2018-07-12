@@ -60,6 +60,9 @@
                 label="Prezzo"
                 id="price"
                 v-model="price"
+                
+                value="10.00"
+                prefix="€"
                 required></v-text-field>
             </v-flex>
           </v-layout>

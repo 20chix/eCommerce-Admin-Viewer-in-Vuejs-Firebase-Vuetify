@@ -37,6 +37,9 @@ export const store = new Vuex.Store({
       if (payload.description) {
         meetup.description = payload.description
       }
+      if (payload.price) {
+        meetup.price = payload.price
+      }
       if (payload.date) {
         meetup.date = payload.date
       }
@@ -127,6 +130,9 @@ export const store = new Vuex.Store({
       }
       if (payload.description) {
         updateObj.description = payload.description
+      }
+      if (payload.price) {
+        updateObj.price = payload.price
       }
       if (payload.date) {
         updateObj.date = payload.date
