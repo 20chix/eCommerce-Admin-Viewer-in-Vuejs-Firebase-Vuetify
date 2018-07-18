@@ -2,12 +2,12 @@
   <v-container>
     <v-layout row>
       <v-flex xs12 lg6 offset-sm3>
-        <h4>Aggiungi un prodotto</h4>
+        <h4>Add a product</h4>
       </v-flex>
     </v-layout>
     <v-layout row>
       <v-flex xs12>
-        <form @submit.prevent="onCreateMeetup">
+        <form @submit.prevent="onAddProduct">
 
           <v-layout row>
             <v-flex xs12 lg6 offset-sm3>
@@ -23,7 +23,7 @@
           
           <v-layout row>
             <v-flex xs12 lg6 offset-sm3>
-              <v-btn raised class="primary" @click="onPickFile">Scegli Immagine</v-btn>
+              <v-btn raised class="primary" @click="onPickFile">Choose Image</v-btn>
               <input
                 type="file"
                 style="display: none"
@@ -45,7 +45,7 @@
             <v-flex xs12 lg6 offset-sm3>
               <v-text-field
                 name="description"
-                label="Descrizione"
+                label="Description"
                 id="description"
                 multi-line
                 v-model="description"
@@ -57,7 +57,7 @@
             <v-flex xs12 lg6 offset-sm3>
               <v-text-field
                 name="title"
-                label="Prezzo"
+                label="Price"
                 id="price"
                 v-model="price"
                 
@@ -73,7 +73,7 @@
               <v-btn
                 class="primary"
                 :disabled="!formIsValid"
-                type="submit">Aggiungi prodotto</v-btn>
+                type="submit">Add product</v-btn>
             </v-flex>
           </v-layout>
         </form>
@@ -117,7 +117,7 @@
       }
     },
     methods: {
-      onCreateMeetup () {
+      onAddProduct () {
         if (!this.formIsValid) {
           return
         }

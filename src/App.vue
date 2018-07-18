@@ -149,8 +149,7 @@
       },
       //User admin mKyP14pMZzT7cTdZOV4Jln2ey512
       getUserAdmin(){
-        if(this.$store.getters.user.id == "mKyP14pMZzT7cTdZOV4Jln2ey512" ||
-          this.$store.getters.user.id == "Gupky78JfOeHUAAS36HQIEPxKWz2"){
+        if(this.$store.getters.user.id == "G5CAz8syTLZBXQP6Z9MUNmM8DwW2"){
             userAdmin : true
             return true
             

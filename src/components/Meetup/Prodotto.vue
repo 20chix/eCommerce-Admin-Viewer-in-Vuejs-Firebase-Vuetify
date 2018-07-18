@@ -30,9 +30,9 @@
             height="400px"
           ></v-card-media>
           <v-card-text>
-             <strong class="display-2 right">  &euro;  {{ product.price }}</strong>
+             <strong class="display-2 right">  &pound;  {{ product.price }}</strong>
             <div>{{ product.description }}
-            <div class="info--text"> Aggiunto {{ product.date | date }}</div>
+            <div class="info--text"> Added on {{ product.date | date }}</div>
             </div>
            
           </v-card-text>

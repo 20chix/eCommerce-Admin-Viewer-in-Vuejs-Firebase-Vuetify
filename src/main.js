@@ -23,12 +23,12 @@ new Vue({
   render: h => h(App),
   created () {
     firebase.initializeApp({
-      apiKey: "AIzaSyCoqwwFdt111MKEk4lk2TJY9jHq_ziGtMA",
-      authDomain: "olgabardelli-14244.firebaseapp.com",
-      databaseURL: "https://olgabardelli-14244.firebaseio.com",
-      projectId: "olgabardelli-14244",
-      storageBucket: "gs://olgabardelli-14244.appspot.com",
-      
+      apiKey: "AIzaSyB9QGsRHSFouWMk48nd4jspNP3c-HuA3EM",
+      authDomain: "chix-1c76c.firebaseapp.com",
+      databaseURL: "https://chix-1c76c.firebaseio.com",
+      projectId: "chix-1c76c",
+      storageBucket: "gs://chix-1c76c.appspot.com",
+      messagingSenderId: "978793876441"
     })
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {

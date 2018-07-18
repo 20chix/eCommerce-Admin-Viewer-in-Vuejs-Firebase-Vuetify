@@ -52,7 +52,7 @@
                     <v-icon left light>arrow_forward</v-icon>
                     Details
                   </v-btn>
-                  <strong> &euro; {{ meetup.price}}</strong>
+                  <strong> &pound; {{ meetup.price}}</strong>
         </v-card-actions>
       </v-card>
     </v-flex>
