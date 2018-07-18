@@ -28,7 +28,7 @@
         @click.stop="sideNav = !sideNav"
         class="hidden-sm-and-up "></v-toolbar-side-icon>
       <v-toolbar-title>
-        <router-link to="/" tag="span" style="cursor: pointer">La Rondine</router-link>
+        <router-link to="/" tag="span" style="cursor: pointer">20 chix</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
@@ -88,7 +88,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        &copy;2018 — <strong>La Rondine di Olga Bardelli</strong>
+        &copy;2018 — <strong>20 Chix</strong>
       </v-card-text>
     </v-card>
   </v-flex>
@@ -122,7 +122,7 @@
             console.log("I'am the admin")
             menuItems = [
               // {icon: 'shopping_cart', title: 'Guarda i prodotti', link: '/ExploraProdotti'},
-              {icon: 'add', title: 'Aggiungi un prodotto', link: '/aggiungi_prodotto/new'},
+              {icon: 'add', title: 'Add a product', link: '/aggiungi_prodotto/new'},
               {icon: 'person', title: 'Profile', link: '/profile'}
           ]
           }else{

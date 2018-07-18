@@ -6,8 +6,10 @@
 <v-container fluid grid-list-md>
   <!-- Initial text -->
       <v-flex>
-          <h2 class="black--text display-3">La Rondine since 1987</h2>
-          <span class="subheading">Trent anni di lavoro a Polinago un piccolo paese adagiato nell appennino modenese. 300 metri di esposizione di articoli di ferramenta casalinghi articoli da regalo complementi di arredo e arredo. Vendita al dettaglio al pubblico e all ingrosso per artigiani e commercianti.
+          <span class="subheading">
+            <br>
+            An eCommenrce website, where the admin of the website can add products with price and categories, and a normal can view and add products to basket.
+            <br>
         </span>
           <v-divider class="my-3"></v-divider>
         </v-flex>
@@ -48,7 +50,7 @@
         <v-card-actions>
                   <v-btn flat :to="'/prodotto/' + meetup.id">
                     <v-icon left light>arrow_forward</v-icon>
-                    Dettagli
+                    Details
                   </v-btn>
                   <strong> &euro; {{ meetup.price}}</strong>
         </v-card-actions>
